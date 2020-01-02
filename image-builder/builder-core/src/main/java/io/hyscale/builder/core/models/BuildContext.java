@@ -19,14 +19,13 @@ import java.util.Map;
 
 import io.hyscale.commons.models.DockerfileEntity;
 import io.hyscale.commons.models.ImageRegistry;
+import io.hyscale.commons.models.ComponentContext;
 
-public class BuildContext {
+public class BuildContext extends ComponentContext{
 
 	private DockerfileEntity dockerfileEntity;
 	private DockerImage dockerImage;
 	private ImageRegistry imageRegistry;
-	private String serviceName;
-	private String appName;
 	private String version;
 	private Map<String, String> buildArgs;
 	private boolean verbose;
@@ -42,22 +41,6 @@ public class BuildContext {
 
 	public void setDockerfileEntity(DockerfileEntity dockerfileEntity) {
 		this.dockerfileEntity = dockerfileEntity;
-	}
-
-	public String getServiceName() {
-		return serviceName;
-	}
-
-	public void setServiceName(String serviceName) {
-		this.serviceName = serviceName;
-	}
-
-	public String getAppName() {
-		return appName;
-	}
-
-	public void setAppName(String appName) {
-		this.appName = appName;
 	}
 
 	public String getVersion() {
